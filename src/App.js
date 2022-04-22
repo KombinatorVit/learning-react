@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import './App.css';
+import styled from 'styled-components';
+
 
 class WhoAmi extends Component {
 constructor(props){
@@ -50,13 +52,18 @@ this.setState({
   }
 }
 
+const Wrapper = styled.div`
+width: 600 px;
+margin: 80px auto 0 auto;
+`
+
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
     < WhoAmi name ='John' surname='Onishnenko' link ='facebook.com'/>
     < WhoAmi name ='Max' surname='Maxon' link ='ticToc.net'/>
 
-    </div>
+    </Wrapper>
   );
 }
 
